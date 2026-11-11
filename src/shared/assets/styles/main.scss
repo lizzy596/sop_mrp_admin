@@ -1,0 +1,117 @@
+$primary: #1e8cf2;
+$secondary:#74FF00;
+$info: #0047FF;
+
+$enable-shadows: true;
+
+$mt-gray: var(--bs-gray-600);
+@import "bootstrap/scss/bootstrap";
+//@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "./icons";
+@import "./login";
+@import "./sidebar";
+
+body {
+  background-color: #ede7e7;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.copyright {
+  font-style: normal;
+  font-weight: 400;
+  @include font-size(17px);
+  line-height: 23px;
+  color: #d7d4d4;
+}
+
+.hide-on-mobile {
+  visibility: visible;
+}
+
+@media screen and (max-width: 992px) {
+  .hide-on-mobile {
+    visibility: hidden;
+    display: none;
+  }
+}
+
+.scrollable-div {
+  max-height: 100vh; /* 100% of the viewport height */
+  overflow-y: auto; /* Enables vertical scrolling */
+}
+
+.print-btn-display {
+  visibility: visible;
+}
+
+
+@media print {
+  
+  body {
+    background-color: #fff
+  }
+
+  .print-btn-display {
+    visibility: hidden;
+    display: none;
+  }
+
+  .print-card {
+    border-width: 0;
+    padding: 0;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .rdt_Pagination {
+    visibility: hidden;
+    display: none;
+  }
+
+  .print-chart-card {
+    box-shadow: none;
+    border-width: 0;
+    width: 100%;
+    padding-right: 20px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+
+  /* Ensure table fits within page */
+  // .print-chart-card .card-body {
+  //   overflow-x: hidden;
+  //   width: 100%;
+  // }
+
+  /* Prevent rows from splitting across pages */
+  .print-chart-card .rdt_TableRow {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Remove unnecessary spacing */
+  .print-chart-card .card-header {
+    padding: 10px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .chart-card .print-chart-card {
+    margin: 0;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    overflow-x: hidden
+  }
+
+  .print-brk-after{
+    margin: 0;
+		overflow: hidden;
+		padding: 0;
+		page-break-after: always;
+  }
+  .print-brk-before {
+    page-break-after: always;
+  }
+}

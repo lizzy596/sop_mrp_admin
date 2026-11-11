@@ -1,0 +1,43 @@
+.sidebar {
+ // width: 190px;
+  height: 100vh;
+ 
+}
+.sidebar-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+ 
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  max-width: 100%;
+}
+
+.sidebar-wrapper {
+  position: relative;
+  max-height: calc(100vh - 75px);
+  min-height: 100%;
+  overflow: auto;
+  z-index: 4;
+  padding-bottom: 100px;
+}
+
+.sidebar-background {
+  background-image: linear-gradient(0deg, rgba(0, 255, 0, 0.15), rgba(0, 0, 0, 0.7)),  url("../img/sidebar.png");
+}
+
+.menu-item-li-active {
+  border: 1px solid #6ED349;
+  border-radius: 10px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.menu-item-text {
+  font-family: "Chakra Petch", sans-serif;
+}
